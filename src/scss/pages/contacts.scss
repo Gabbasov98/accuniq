@@ -1,6 +1,8 @@
 @import "../vars.scss";
 .contacts--page {
-    padding-top: 60px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 60px;
+    }
     margin-top: 17px;
     border-top: 1px solid #F0F0F0;
     .contacts {
@@ -13,6 +15,35 @@
         }
         &__btn {
             margin: 42px 0 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contacts--page {
+        .contacts {
+            &__inner {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+            &__btn {
+                position: static;
+                transform: unset;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contacts--page {
+        .contacts {
+            &__inner {
+                grid-template-columns: 1fr;
+            }
+            &__btn {
+                margin-top: 20px;
+            }
         }
     }
 }

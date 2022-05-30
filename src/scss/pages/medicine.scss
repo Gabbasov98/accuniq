@@ -8,8 +8,10 @@
         &__left {
             max-width: 1218px;
         }
-        &__desc {
-            margin-top: 45px;
+        @media screen and (min-width: 992px) {
+            &__desc {
+                margin-top: 45px;
+            }
         }
     }
 }

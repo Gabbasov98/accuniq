@@ -400,6 +400,12 @@
             padding: 20px 0 0;
         }
     }
+    .decision-card {
+        &__link {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 
 @media screen and (max-width: 400px) {

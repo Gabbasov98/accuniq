@@ -897,11 +897,16 @@
     }
     .edu-desc {
         margin-top: 30px;
+        &__title {
+            text-align: center;
+        }
         &__video {
             &-wrap {
                 width: 250px;
                 height: 250px;
                 padding: 15px;
+                margin-left: auto;
+                margin-right: auto;
             }
             &-btn {
                 width: 50px;
@@ -947,14 +952,14 @@
         }
         &__item {
             font-size: 15px;
-            display: block;
+            // display: block;
             &:not(:last-child) {
                 margin-bottom: 25px;
             }
             &-num {
                 width: 65px;
                 height: 65px;
-                margin: 0 0 20px;
+                margin: 0 10px 0 0;
             }
         }
     }

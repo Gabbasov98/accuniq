@@ -215,7 +215,7 @@
         }
         .tabs {
             justify-content: flex-start;
-            flex-wrap: wrap;
+            overflow-x: auto;
             margin-top: -16px;
         }
         .tab {
@@ -318,7 +318,12 @@
         &__nav {
             position: absolute;
             bottom: 105px;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &__link {
+            margin-left: auto;
+            margin-right: auto;
         }
         .swiper {
             &-button {

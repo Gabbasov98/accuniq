@@ -482,6 +482,11 @@
 }
 
 @media screen and (max-width: 576px) {
+    .advantages {
+        &__btn {
+            margin: 30px auto 0;
+        }
+    }
     .catalog {
         padding: 30px 0;
         &__groups {

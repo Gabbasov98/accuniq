@@ -49,6 +49,13 @@ function compatibilitySlider() {
     })
 }
 
+function effectivitySlider() {
+    var swiper = new Swiper('.effectivity__slider .swiper-container', {
+        slidesPerView: "auto",
+        spaceBetween: 0,
+    })
+}
+
 $(document).ready(function() {
     decisionSlider()
     compatibilitySlider()
@@ -57,8 +64,18 @@ $(document).ready(function() {
         trustSlider()
     }
 
+    if (window.innerWidth < 992) {
+        effectivitySlider()
+    }
+
     $(window).resize(function() {
-        trustSlider()
+        if (window.innerWidth < 1400) {
+            trustSlider()
+        }
+
+        if (window.innerWidth < 992) {
+            effectivitySlider()
+        }
     })
 
 })
