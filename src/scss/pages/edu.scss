@@ -180,6 +180,17 @@
             }
         }
     }
+    &__btn {
+        margin-top: 52px;
+        width: 255px;
+        height: 70px;
+        border-radius: 50px;
+        font-size: 15px;
+        letter-spacing: 0.02em;
+        svg {
+            margin-left: 15px;
+        }
+    }
 }
 
 .for-who {
@@ -780,6 +791,9 @@
                 margin-bottom: 10px;
             }
         }
+        &__btn {
+            margin-top: 25px;
+        }
     }
     .for-who {
         padding: 45px 0;
@@ -902,6 +916,10 @@
         &__desc {
             margin-top: 15px;
             font-size: 14px;
+        }
+        &__btn {
+            margin-top: 15px;
+            max-width: 100%;
         }
     }
     .for-who {
