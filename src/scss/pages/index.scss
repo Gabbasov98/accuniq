@@ -40,6 +40,24 @@
     }
 }
 
+.video {
+    width: 100%;
+    height: 100%;
+    &-block {
+        max-width: 1920px;
+        margin: 0 auto;
+        position: relative;
+    }
+    &__btn {
+        bottom: 65px;
+        right: 202px;
+        position: absolute;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+    }
+}
+
 .consult {
     padding: 120px 0 110px;
     background: #2B2B2B;
@@ -832,6 +850,12 @@
 }
 
 @media screen and (max-width: 1400px) {
+    .video {
+        &__btn {
+            bottom: 20px;
+            right: 30px;
+        }
+    }
     .consult {
         padding: 75px 0;
         &__inner {
@@ -1154,6 +1178,23 @@
         }
         &__btn {
             margin: 30px 0 0;
+        }
+    }
+    .video {
+        &__btn {
+            bottom: 50%;
+            right: 50%;
+            transform: translate(50%, 50%);
+            background: #000;
+            width: 40px;
+            height: 40px;
+            path {
+                fill: #fff;
+            }
+            svg {
+                width: 15px;
+                height: auto;
+            }
         }
     }
     .consult {
