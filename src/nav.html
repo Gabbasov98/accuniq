@@ -1,0 +1,93 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Главная", "description":"", "keywords":"",})
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+    
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body>
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="catalog.html" style="display: block; margin-bottom: 20px;">
+            каталог
+        </a>
+        <a href="catalog-item.html" style="display: block; margin-bottom: 20px;">
+            карточка товара
+        </a>
+        <a href="catalog-item2.html" style="display: block; margin-bottom: 20px;">
+            карточка доп товара
+        </a>
+        <a href="about.html" style="display: block; margin-bottom: 20px;">
+            О компании
+        </a>
+        <a href="decision.html" style="display: block; margin-bottom: 20px;">
+            ГОтовые решения для вашего бизнеса
+        </a>
+        <a href="medicine.html" style="display: block; margin-bottom: 20px;">
+            частная медицина
+        </a>
+        <a href="support.html" style="display: block; margin-bottom: 20px;">
+            Поддержка
+        </a>
+        <a href="qa.html" style="display: block; margin-bottom: 20px;">
+            Вопросы и ответы
+        </a>
+        <a href="blog.html" style="display: block; margin-bottom: 20px;">
+            Блог
+        </a>
+        <a href="blog2.html" style="display: block; margin-bottom: 20px;">
+            Блог2
+        </a>
+        <a href="blog-item.html" style="display: block; margin-bottom: 20px;">
+            запись блога
+        </a>
+        <a href="contacts.html" style="display: block; margin-bottom: 20px;">
+            контакты
+        </a>
+        <a href="404.html" style="display: block; margin-bottom: 20px;">
+            404
+        </a>
+        <a href="edu.html" style="display: block; margin-bottom: 20px;">
+            Обучение
+        </a>
+        <a href="conf.html" style="display: block; margin-bottom: 20px;">
+            Политика обработки персональных данных
+        </a>
+        <a href="map.html" style="display: block; margin-bottom: 20px;">
+            Карта сайта
+        </a>
+
+
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#callModal">
+            Заказать звонок
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#useFreeModal">
+            попробовать бесплатно
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#priceModal">
+            Узнать стоимость
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#addressModal">
+            Как к нам добраться
+        </button>
+
+    </div>
+
+    @@include('components/_popups.html')
+    <!--  -->
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+@import "../vars";
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-out .225s;
+    padding: 0;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-black {
+    background-color: #000;
+    color: #fff;
+    &:hover {
+        background-color: rgba(#000, .8);
+        color: #fff;
+    }
+}
+
+.btn-black-outline {
+    border: 1px solid $black;
+    color: $black;
+    &:hover {
+        background-color: $black;
+        color: #fff;
+        path {
+            fill: #fff;
+        }
+    }
+}
+
+.btn-brown {
+    background-color: $primary;
+    color: #FFFFFF;
+    &:hover {
+        color: #FFFFFF;
+        background-color: darken($primary, 5%);
+    }
+}
+
+.btn-brown-outline {
+    border: 1px solid $primary;
+    color: $primary;
+    &:hover {
+        background-color: $primary;
+        color: #fff;
+        path {
+            fill: #fff;
+        }
+    }
+}
+
+.swiper-button {
+    &-prev,
+    &-next {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        svg {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &-prev {
+        svg {
+            right: -7px;
+        }
+    }
+    &-next {
+        svg {
+            left: -7px;
+        }
+    }
+}

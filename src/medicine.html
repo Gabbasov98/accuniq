@@ -1,0 +1,141 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Частная медицина", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html',{"subHeader":"type4","p0":"","between":"true"})
+        <!-- @@include('components/page-blocks/_header.html',{"subHeader":"type3","p0":"","between":""}) -->
+        <main class="content">
+            @@include('components/page-blocks/_breadcrumbs.html',{"second":"О компании","third":"","fourth":""})
+            <section class='main main--medicine'>
+                <div class='container'>
+                    <div class='main__inner'>
+                        <div class="main__left">
+                            <h1 class="main__title display2 lighthaus">
+                                Разработайте более <br> эффективные стратегии лечения и профилактики вместе с ACCUNIQ
+                            </h1>
+                            <div class="main__desc lighthaus">Анализ состава тела безинвазивным методом с помощью анализатора состава тела ACCUNIQ BC720</div>
+                        </div>
+                        <button class="main__btn btn btn-brown lighthaus">
+                             <span>Оставить заявку</span>
+                             <svg width="101" height="8" viewBox="0 0 101 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M100.354 4.35355C100.549 4.15829 100.549 3.84171 100.354 3.64645L97.1716 0.464466C96.9763 0.269204 96.6597 0.269204 96.4645 0.464466C96.2692 0.659728 96.2692 0.976311 96.4645 1.17157L99.2929 4L96.4645 6.82843C96.2692 7.02369 96.2692 7.34027 96.4645 7.53553C96.6597 7.7308 96.9763 7.7308 97.1716 7.53553L100.354 4.35355ZM0 4.5H100V3.5H0V4.5Z" fill="white"/>
+                            </svg>
+                         </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class='medicine'>
+                <div class='container'>
+                    <div class="medicine__title lighthaus">
+                        <svg width="99" height="8" viewBox="0 0 99 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M98.3536 4.35355C98.5488 4.15829 98.5488 3.84171 98.3536 3.64645L95.1716 0.464466C94.9763 0.269204 94.6597 0.269204 94.4645 0.464466C94.2692 0.659728 94.2692 0.976311 94.4645 1.17157L97.2929 4L94.4645 6.82843C94.2692 7.02369 94.2692 7.34027 94.4645 7.53553C94.6597 7.7308 94.9763 7.7308 95.1716 7.53553L98.3536 4.35355ZM0 4.5H98V3.5H0V4.5Z" fill="black"/>
+                        </svg>
+                        <span>Частная медицина</span>
+                    </div>
+
+                </div>
+                <div class="medicine__wrap">
+                    <div class="container">
+                        <div class='medicine__items'>
+                            <div class="medicine-card">
+                                <img src="img/medicine.webp" alt="" class="medicine__img">
+                                <div class="medicine-card__info" style="right: 30%; top: 21%;">
+                                    @@include('components/medicine/_medicine-modal.html')
+                                </div>
+                                <div class="medicine-card__info" style="right: 48%; top: 41%;">
+                                    @@include('components/medicine/_medicine-modal.html')
+                                </div>
+                                <div class="medicine-card__info" style="right: 62%; top: 78%;">
+                                    @@include('components/medicine/_medicine-modal.html')
+                                </div>
+                            </div>
+
+                            <div class="medicine-card">
+                                <img src="img/medicine2.webp" alt="" class="medicine__img">
+                                <div class="medicine-card__info" style="right: 56%; top: 28%;">
+                                    @@include('components/medicine/_medicine-modal.html')
+                                </div>
+                                <div class="medicine-card__info" style="right: 48%; top: 41%;">
+                                    @@include('components/medicine/_medicine-modal.html')
+                                </div>
+                                <div class="medicine-card__info" style="right: 33%; top: 74%;">
+                                    @@include('components/medicine/_medicine-modal.html')
+                                </div>
+                            </div>
+
+                            <div class="medicine-card">
+                                <img src="img/medicine3.webp" alt="" class="medicine__img">
+                                <div class="medicine-card__info" style="right: 62%; top: 28%;">
+                                    @@include('components/medicine/_medicine-modal.html')
+                                </div>
+                                <div class="medicine-card__info" style="right: 48%; top: 41%;">
+                                    @@include('components/medicine/_medicine-modal.html')
+                                </div>
+                                <div class="medicine-card__info" style="right: 48%; top: 81%;">
+                                    @@include('components/medicine/_medicine-modal.html')
+                                </div>
+                            </div>
+
+                            <div class="medicine-card">
+                                <img src="img/medicine4.webp" alt="" class="medicine__img">
+                                <div class="medicine-card__info" style="right: 69%; top: 21%;">
+                                    @@include('components/medicine/_medicine-modal.html')
+                                </div>
+                                <div class="medicine-card__info" style="right: 48%; top: 41%;">
+                                    @@include('components/medicine/_medicine-modal.html')
+                                </div>
+                                <div class="medicine-card__info" style="right: 55%; top: 79%;">
+                                    @@include('components/medicine/_medicine-modal.html')
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class='advantages'>
+                @@include('components/page-blocks/_advantages.html')
+            </section>
+
+            <section class='results'>
+                @@include('components/page-blocks/_results.html')
+            </section>
+
+            <section class='effectivity effectivity--reverse'>
+                @@include('components/page-blocks/_effectivity.html')
+            </section>
+
+            <section class='tech'>
+                @@include('components/page-blocks/_tech.html')
+            </section>
+
+            <section class='compatibility'>
+                @@include('components/page-blocks/_compatibility.html')
+            </section>
+
+            <section class='trust'>
+                @@include('components/page-blocks/_trust.html')
+            </section>
+
+            <section class='consult'>
+                @@include('components/page-blocks/_consult.html',{"type":"2"})
+            </section>
+
+            <section class='seo'>
+                @@include('components/page-blocks/_seo.html',{"title":"SEo текст"})
+            </section>
+
+            <section class='contacts'>
+                @@include('components/page-blocks/_contacts.html')
+            </section>
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Вопросы и ответы", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html',{"subHeader":"","p0":"","between":"true"})
+        <main class="content">
+            @@include('components/page-blocks/_breadcrumbs.html',{"second":"Поддержка","third":"","fourth":""})
+            <section class='main'>
+                <div class='container'>
+                    <div class='main__inner'>
+                        <div class="main__left">
+                            <h1 class="main__title display1 lighthaus">
+                                Вопросы и ответы
+                            </h1>
+                            <div class="main__desc lighthaus">Если у вас возникли вопросы, пожалуйста, свяжитесь с нами</div>
+                        </div>
+                        <button class="main__btn btn btn-brown lighthaus">
+                             <span>Оставить заявку</span>
+                             <svg width="101" height="8" viewBox="0 0 101 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M100.354 4.35355C100.549 4.15829 100.549 3.84171 100.354 3.64645L97.1716 0.464466C96.9763 0.269204 96.6597 0.269204 96.4645 0.464466C96.2692 0.659728 96.2692 0.976311 96.4645 1.17157L99.2929 4L96.4645 6.82843C96.2692 7.02369 96.2692 7.34027 96.4645 7.53553C96.6597 7.7308 96.9763 7.7308 97.1716 7.53553L100.354 4.35355ZM0 4.5H100V3.5H0V4.5Z" fill="white"/>
+                            </svg>
+                         </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class='qa tab-parent'>
+                <div class='container'>
+                    <div class='qa__tabs tabs'>
+                        <div class="tab tab--active" data-tabs-path="1">Общие вопросы</div>
+                        <div class="tab" data-tabs-path="2">Тестирование и результаты с ACCUNIQ</div>
+                    </div>
+                    <div class="qa__content">
+                        <div class="tab-content tab-content--active" data-tabs-path="1">
+                            <div class="faq__items">
+                                <div class="qa-card">
+                                    @@include('components/cards/_qa-card.html',{"title":"1. Что такое анализ тела с оборудованием ACCUNIQ?"})
+                                </div>
+                                <div class="qa-card">
+                                    @@include('components/cards/_qa-card.html',{"title":"2. Как работают анализаторы тела ACCUNIQ?"})
+                                </div>
+                                <div class="qa-card">
+                                    @@include('components/cards/_qa-card.html',{"title":"3. Безопасно ли проводить анализ тела с помощью оборудования ACCUNIQ?"})
+                                </div>
+                                <div class="qa-card">
+                                    @@include('components/cards/_qa-card.html',{"title":"4. Как часто рекомендуется проводить анализ тела с ACCUNIQ?"})
+                                </div>
+                                <div class="qa-card">
+                                    @@include('components/cards/_qa-card.html',{"title":"5. В каких отраслях используется оборудование ACCUNIQ для анализа тела?"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" data-tabs-path="2">
+                            <div class="faq__items">
+                                <div class="qa-card">
+                                    @@include('components/cards/_qa-card.html',{"title":"1. Что такое анализ тела с оборудованием ACCUNIQ?"})
+                                </div>
+                                <div class="qa-card">
+                                    @@include('components/cards/_qa-card.html',{"title":"2. Как работают анализаторы тела ACCUNIQ?"})
+                                </div>
+                                <div class="qa-card">
+                                    @@include('components/cards/_qa-card.html',{"title":"3. Безопасно ли проводить анализ тела с помощью оборудования ACCUNIQ?"})
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class='consult consult2'>
+                @@include('components/page-blocks/_consult2.html')
+            </section>
+
+            <section class='blog-collection'>
+                @@include('components/page-blocks/_blog-collection.html',{"title":"Новое в блоге"})
+            </section>
+
+            <section class='seo'>
+                @@include('components/page-blocks/_seo.html',{"title":"SEo текст"})
+            </section>
+
+            <section class='contacts'>
+                @@include('components/page-blocks/_contacts.html')
+            </section>
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

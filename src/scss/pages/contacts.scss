@@ -1,0 +1,18 @@
+@import "../vars.scss";
+.contacts--page {
+    padding-top: 60px;
+    margin-top: 17px;
+    border-top: 1px solid #F0F0F0;
+    .contacts {
+        &__inner {
+            margin-top: 0;
+            display: flex;
+            justify-content: space-between;
+            gap: unset;
+            padding-bottom: 18px;
+        }
+        &__btn {
+            margin: 42px 0 0 0;
+        }
+    }
+}

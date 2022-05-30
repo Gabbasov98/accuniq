@@ -1,0 +1,115 @@
+@import "../vars";
+.lighthaus {
+    font-family: $font2;
+}
+
+.display1 {
+    font-size: 67px;
+    line-height: 119%;
+    letter-spacing: -0.01em;
+}
+
+.display2 {
+    font-size: 58px;
+    line-height: 121%;
+    letter-spacing: 0.02em;
+}
+
+.display3 {
+    font-size: 42px;
+    line-height: 124%;
+    letter-spacing: -0.01em;
+}
+
+ol {
+    counter-reset: num;
+    padding: 0;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    li {
+        font-size: 15px;
+        line-height: 180%;
+        letter-spacing: 0.02em;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        &:before {
+            content: counter(num) ".";
+            counter-increment: num;
+            // position: absolute;
+            z-index: 1;
+            font-size: 28px;
+            line-height: 40px;
+            font-family: $font2;
+            min-width: 34px;
+            margin-right: 17px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .display1 {
+        font-size: 60px;
+    }
+    .display2 {
+        font-size: 54px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .display1 {
+        font-size: 50px;
+    }
+    .display2 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .display1 {
+        font-size: 40px;
+    }
+    .display2 {
+        font-size: 38px;
+    }
+    .display3 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .display1 {
+        font-size: 30px;
+    }
+    .display2 {
+        font-size: 28px;
+    }
+    .display3 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .display1 {
+        font-size: 27px;
+    }
+    .display2 {
+        font-size: 25px;
+    }
+    ol {
+        li {
+            font-size: 14px;
+            &::before {
+                margin-right: 2px;
+                font-size: 24px;
+                min-width: 25px;
+            }
+        }
+    }
+}

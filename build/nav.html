@@ -1,0 +1,245 @@
+<!DOCTYPE html> <html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Главная</title>
+</head>
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+    
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body>
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="catalog.html" style="display: block; margin-bottom: 20px;">
+            каталог
+        </a>
+        <a href="catalog-item.html" style="display: block; margin-bottom: 20px;">
+            карточка товара
+        </a>
+        <a href="catalog-item2.html" style="display: block; margin-bottom: 20px;">
+            карточка доп товара
+        </a>
+        <a href="about.html" style="display: block; margin-bottom: 20px;">
+            О компании
+        </a>
+        <a href="decision.html" style="display: block; margin-bottom: 20px;">
+            ГОтовые решения для вашего бизнеса
+        </a>
+        <a href="medicine.html" style="display: block; margin-bottom: 20px;">
+            частная медицина
+        </a>
+        <a href="support.html" style="display: block; margin-bottom: 20px;">
+            Поддержка
+        </a>
+        <a href="qa.html" style="display: block; margin-bottom: 20px;">
+            Вопросы и ответы
+        </a>
+        <a href="blog.html" style="display: block; margin-bottom: 20px;">
+            Блог
+        </a>
+        <a href="blog2.html" style="display: block; margin-bottom: 20px;">
+            Блог2
+        </a>
+        <a href="blog-item.html" style="display: block; margin-bottom: 20px;">
+            запись блога
+        </a>
+        <a href="contacts.html" style="display: block; margin-bottom: 20px;">
+            контакты
+        </a>
+        <a href="404.html" style="display: block; margin-bottom: 20px;">
+            404
+        </a>
+        <a href="edu.html" style="display: block; margin-bottom: 20px;">
+            Обучение
+        </a>
+        <a href="conf.html" style="display: block; margin-bottom: 20px;">
+            Политика обработки персональных данных
+        </a>
+        <a href="map.html" style="display: block; margin-bottom: 20px;">
+            Карта сайта
+        </a>
+
+
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#callModal">
+            Заказать звонок
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#useFreeModal">
+            попробовать бесплатно
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#priceModal">
+            Узнать стоимость
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#addressModal">
+            Как к нам добраться
+        </button>
+
+    </div>
+
+    <div class="modal fade" id="callModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.16642 14.6553C3.84101 14.9808 3.84106 15.5084 4.16652 15.8338C4.49199 16.1592 5.01962 16.1592 5.34503 15.8337L9.9994 11.1786L14.6541 15.8333C14.9796 16.1587 15.5072 16.1587 15.8326 15.8333C16.1581 15.5079 16.1581 14.9802 15.8326 14.6548L11.1778 9.99998L15.8323 5.34466C16.1576 5.01919 16.1576 4.49156 15.8321 4.16615C15.5067 3.84073 14.9791 3.84078 14.6536 4.16625L9.99923 8.82148L5.34446 4.16665C5.01903 3.84122 4.49139 3.84122 4.16596 4.16665C3.84051 4.49209 3.84051 5.01973 4.16596 5.34517L8.8209 10.0001L4.16642 14.6553Z" fill="white"/>
+            </svg>
+        </button>
+
+        <div class="modal__title lighthaus">Заказать звонок</div>
+        <div class="modal__desc lighthaus">Закажите звонок и начните работать с нами уже сегодня</div>
+
+        <form action="" class="modal__form">
+            <fieldset class='modal__form-group form-group'>
+                <img src="img/user.svg" alt="">
+                <input type='text' placeholder="Имя" />
+            </fieldset>
+            <fieldset class='modal__form-group form-group'>
+                <img src="img/phone.svg" alt="">
+                <input type='text' placeholder="Имя" />
+            </fieldset>
+            <div class="modal__check check">
+                <input type='checkbox' />
+                <label>Согласен с политикой конфиденциальности</label>
+            </div>
+            <button class="modal__btn btn btn-brown lighthaus">
+                <span>ОТправить</span>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.7825 15.3315L13.634 22.48C13.5456 22.5653 13.4272 22.6126 13.3043 22.6115C13.1814 22.6105 13.0638 22.5612 12.9769 22.4742C12.89 22.3873 12.8407 22.2698 12.8397 22.1469C12.8386 22.024 12.8858 21.9056 12.9712 21.8171L19.7883 15.0001L12.9712 8.18307C12.8858 8.09466 12.8386 7.97625 12.8397 7.85335C12.8407 7.73044 12.89 7.61288 12.9769 7.52597C13.0638 7.43906 13.1814 7.38976 13.3043 7.38869C13.4272 7.38762 13.5456 7.43487 13.634 7.52026L20.7825 14.6687C20.8704 14.7566 20.9197 14.8758 20.9197 15.0001C20.9197 15.1244 20.8704 15.2436 20.7825 15.3315ZM17.0325 14.6687L9.88404 7.52026C9.79563 7.43487 9.67723 7.38762 9.55432 7.38869C9.43142 7.38976 9.31385 7.43906 9.22694 7.52597C9.14003 7.61288 9.09073 7.73044 9.08966 7.85335C9.08859 7.97625 9.13584 8.09466 9.22123 8.18307L16.0383 15.0001L9.22123 21.8171C9.17646 21.8604 9.14075 21.9121 9.11618 21.9693C9.09162 22.0265 9.07868 22.088 9.07814 22.1502C9.0776 22.2125 9.08946 22.2742 9.11303 22.3318C9.1366 22.3894 9.17141 22.4418 9.21542 22.4858C9.25943 22.5298 9.31177 22.5646 9.36938 22.5882C9.42698 22.6117 9.48871 22.6236 9.55095 22.623C9.61319 22.6225 9.6747 22.6096 9.73189 22.585C9.78908 22.5604 9.8408 22.5247 9.88404 22.48L17.0325 15.3315C17.1204 15.2436 17.1697 15.1244 17.1697 15.0001C17.1697 14.8758 17.1204 14.7566 17.0325 14.6687Z" fill="white"/>
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="useFreeModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.16642 14.6553C3.84101 14.9808 3.84106 15.5084 4.16652 15.8338C4.49199 16.1592 5.01962 16.1592 5.34503 15.8337L9.9994 11.1786L14.6541 15.8333C14.9796 16.1587 15.5072 16.1587 15.8326 15.8333C16.1581 15.5079 16.1581 14.9802 15.8326 14.6548L11.1778 9.99998L15.8323 5.34466C16.1576 5.01919 16.1576 4.49156 15.8321 4.16615C15.5067 3.84073 14.9791 3.84078 14.6536 4.16625L9.99923 8.82148L5.34446 4.16665C5.01903 3.84122 4.49139 3.84122 4.16596 4.16665C3.84051 4.49209 3.84051 5.01973 4.16596 5.34517L8.8209 10.0001L4.16642 14.6553Z" fill="white"/>
+            </svg>
+        </button>
+
+        <div class="modal__title lighthaus">попробовать бесплатно
+        </div>
+        <div class="modal__desc lighthaus">Попробуйте бесплатно и начните работать с нами уже сегодня</div>
+
+        <form action="" class="modal__form">
+            <fieldset class='modal__form-group form-group'>
+                <img src="img/user.svg" alt="">
+                <input type='text' placeholder="Имя" />
+            </fieldset>
+            <fieldset class='modal__form-group form-group'>
+                <img src="img/phone.svg" alt="">
+                <input type='text' placeholder="Имя" />
+            </fieldset>
+            <div class="modal__check check">
+                <input type='checkbox' />
+                <label>Согласен с политикой конфиденциальности</label>
+            </div>
+            <button class="modal__btn btn btn-brown lighthaus">
+                <span>Попробовать бесплатно</span>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.7825 15.3315L13.634 22.48C13.5456 22.5653 13.4272 22.6126 13.3043 22.6115C13.1814 22.6105 13.0638 22.5612 12.9769 22.4742C12.89 22.3873 12.8407 22.2698 12.8397 22.1469C12.8386 22.024 12.8858 21.9056 12.9712 21.8171L19.7883 15.0001L12.9712 8.18307C12.8858 8.09466 12.8386 7.97625 12.8397 7.85335C12.8407 7.73044 12.89 7.61288 12.9769 7.52597C13.0638 7.43906 13.1814 7.38976 13.3043 7.38869C13.4272 7.38762 13.5456 7.43487 13.634 7.52026L20.7825 14.6687C20.8704 14.7566 20.9197 14.8758 20.9197 15.0001C20.9197 15.1244 20.8704 15.2436 20.7825 15.3315ZM17.0325 14.6687L9.88404 7.52026C9.79563 7.43487 9.67723 7.38762 9.55432 7.38869C9.43142 7.38976 9.31385 7.43906 9.22694 7.52597C9.14003 7.61288 9.09073 7.73044 9.08966 7.85335C9.08859 7.97625 9.13584 8.09466 9.22123 8.18307L16.0383 15.0001L9.22123 21.8171C9.17646 21.8604 9.14075 21.9121 9.11618 21.9693C9.09162 22.0265 9.07868 22.088 9.07814 22.1502C9.0776 22.2125 9.08946 22.2742 9.11303 22.3318C9.1366 22.3894 9.17141 22.4418 9.21542 22.4858C9.25943 22.5298 9.31177 22.5646 9.36938 22.5882C9.42698 22.6117 9.48871 22.6236 9.55095 22.623C9.61319 22.6225 9.6747 22.6096 9.73189 22.585C9.78908 22.5604 9.8408 22.5247 9.88404 22.48L17.0325 15.3315C17.1204 15.2436 17.1697 15.1244 17.1697 15.0001C17.1697 14.8758 17.1204 14.7566 17.0325 14.6687Z" fill="white"/>
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="priceModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.16642 14.6553C3.84101 14.9808 3.84106 15.5084 4.16652 15.8338C4.49199 16.1592 5.01962 16.1592 5.34503 15.8337L9.9994 11.1786L14.6541 15.8333C14.9796 16.1587 15.5072 16.1587 15.8326 15.8333C16.1581 15.5079 16.1581 14.9802 15.8326 14.6548L11.1778 9.99998L15.8323 5.34466C16.1576 5.01919 16.1576 4.49156 15.8321 4.16615C15.5067 3.84073 14.9791 3.84078 14.6536 4.16625L9.99923 8.82148L5.34446 4.16665C5.01903 3.84122 4.49139 3.84122 4.16596 4.16665C3.84051 4.49209 3.84051 5.01973 4.16596 5.34517L8.8209 10.0001L4.16642 14.6553Z" fill="white"/>
+            </svg>
+        </button>
+
+        <div class="modal__title lighthaus">Узнать стоимость
+        </div>
+        <div class="modal__desc lighthaus">Узнайте стоимость и начните работать с нами уже сегодня</div>
+
+        <form action="" class="modal__form">
+            <fieldset class='modal__form-group form-group'>
+                <img src="img/user.svg" alt="">
+                <input type='text' placeholder="Имя" />
+            </fieldset>
+            <fieldset class='modal__form-group form-group'>
+                <img src="img/phone.svg" alt="">
+                <input type='text' placeholder="Имя" />
+            </fieldset>
+            <div class="modal__check check">
+                <input type='checkbox' />
+                <label>Согласен с политикой конфиденциальности</label>
+            </div>
+            <button class="modal__btn btn btn-brown lighthaus">
+                <span>Узнать стоимость</span>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.7825 15.3315L13.634 22.48C13.5456 22.5653 13.4272 22.6126 13.3043 22.6115C13.1814 22.6105 13.0638 22.5612 12.9769 22.4742C12.89 22.3873 12.8407 22.2698 12.8397 22.1469C12.8386 22.024 12.8858 21.9056 12.9712 21.8171L19.7883 15.0001L12.9712 8.18307C12.8858 8.09466 12.8386 7.97625 12.8397 7.85335C12.8407 7.73044 12.89 7.61288 12.9769 7.52597C13.0638 7.43906 13.1814 7.38976 13.3043 7.38869C13.4272 7.38762 13.5456 7.43487 13.634 7.52026L20.7825 14.6687C20.8704 14.7566 20.9197 14.8758 20.9197 15.0001C20.9197 15.1244 20.8704 15.2436 20.7825 15.3315ZM17.0325 14.6687L9.88404 7.52026C9.79563 7.43487 9.67723 7.38762 9.55432 7.38869C9.43142 7.38976 9.31385 7.43906 9.22694 7.52597C9.14003 7.61288 9.09073 7.73044 9.08966 7.85335C9.08859 7.97625 9.13584 8.09466 9.22123 8.18307L16.0383 15.0001L9.22123 21.8171C9.17646 21.8604 9.14075 21.9121 9.11618 21.9693C9.09162 22.0265 9.07868 22.088 9.07814 22.1502C9.0776 22.2125 9.08946 22.2742 9.11303 22.3318C9.1366 22.3894 9.17141 22.4418 9.21542 22.4858C9.25943 22.5298 9.31177 22.5646 9.36938 22.5882C9.42698 22.6117 9.48871 22.6236 9.55095 22.623C9.61319 22.6225 9.6747 22.6096 9.73189 22.585C9.78908 22.5604 9.8408 22.5247 9.88404 22.48L17.0325 15.3315C17.1204 15.2436 17.1697 15.1244 17.1697 15.0001C17.1697 14.8758 17.1204 14.7566 17.0325 14.6687Z" fill="white"/>
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="modal address-modal fade tab-parent" id="addressModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.16642 14.6553C3.84101 14.9808 3.84106 15.5084 4.16652 15.8338C4.49199 16.1592 5.01962 16.1592 5.34503 15.8337L9.9994 11.1786L14.6541 15.8333C14.9796 16.1587 15.5072 16.1587 15.8326 15.8333C16.1581 15.5079 16.1581 14.9802 15.8326 14.6548L11.1778 9.99998L15.8323 5.34466C16.1576 5.01919 16.1576 4.49156 15.8321 4.16615C15.5067 3.84073 14.9791 3.84078 14.6536 4.16625L9.99923 8.82148L5.34446 4.16665C5.01903 3.84122 4.49139 3.84122 4.16596 4.16665C3.84051 4.49209 3.84051 5.01973 4.16596 5.34517L8.8209 10.0001L4.16642 14.6553Z" fill="white"/>
+            </svg>
+        </button>
+
+        <div class="address-modal__tabs lighthaus">
+            <div class="tab tab--active" data-tabs-path="1">
+                <svg width="51" height="8" viewBox="0 0 51 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50.3536 4.35355C50.5488 4.15829 50.5488 3.84171 50.3536 3.64645L47.1716 0.464466C46.9763 0.269204 46.6597 0.269204 46.4645 0.464466C46.2692 0.659728 46.2692 0.976311 46.4645 1.17157L49.2929 4L46.4645 6.82843C46.2692 7.02369 46.2692 7.34027 46.4645 7.53553C46.6597 7.7308 46.9763 7.7308 47.1716 7.53553L50.3536 4.35355ZM0 4.5H50V3.5H0V4.5Z" fill="black"/>
+                </svg>
+                <span>На машине</span>
+            </div>
+            <div class="tab" data-tabs-path="2">
+                <span>на общественном транспорте</span>
+            </div>
+        </div>
+
+        <div class="address-modal__desc">
+            <div class="tab-content tab-content--active" data-tabs-path="1">
+                <p>Инновационные и легкие в использовании сфигмоманометры ACCUNIQ обеспечивает быстрые и точные результаты при измерении артериального давления. Сегодня эти изделия нашли своё применение в больницах, медицинских учреждениях, диагностических
+                    и реабилитационных центрах, фитнес центрах, спа-салонах и коммерческих структурах. Во всем мире их успешно и продуктивно используют специалисты в области здравоохранения.</p>
+            </div>
+            <div class="tab-content" data-tabs-path="2">
+                <p>Инновационные и легкие в использовании сфигмоманометры ACCUNIQ обеспечивает быстрые и точные результаты при измерении артериального давления. Сегодня эти изделия нашли своё применение в больницах, медицинских учреждениях, диагностических
+                    и реабилитационных центрах, фитнес центрах, спа-салонах и коммерческих структурах. Во всем мире их успешно и продуктивно используют специалисты в области здравоохранения.</p>
+                <p>Инновационные и легкие в использовании сфигмоманометры ACCUNIQ обеспечивает быстрые и точные результаты при измерении артериального давления. Сегодня эти изделия нашли своё применение в больницах, медицинских учреждениях, диагностических
+                    и реабилитационных центрах, фитнес центрах, спа-салонах и коммерческих структурах. Во всем мире их успешно и продуктивно используют специалисты в области здравоохранения.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="modal-backdrop show"></div> -->
+    <!--  -->
+    <script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

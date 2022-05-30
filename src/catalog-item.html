@@ -1,0 +1,148 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Главная", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html',{"subHeader":"type3","p0":"","between":""})
+        <!-- @@include('components/page-blocks/_header.html',{"subHeader":"type3","p0":"","between":""}) -->
+        <main class="content">
+
+            @@include('components/page-blocks/_breadcrumbs.html',{"second":"Продукты","third":"","fourth":""})
+
+            <section class='catalog-advantages lighthaus'>
+                <div class='container'>
+                    <div class="catalog-advantages__title display1">ACCUNIQ BC380</div>
+                    <div class='catalog-advantages__items'>
+                        <div class="catalog-advantages__item">
+                            <div class="catalog-advantages__item-icon">
+                                <img src="img/advantages-icon.svg" alt="">
+                            </div>
+                            <div class="catalog-advantages__item-title">Анализ всего тела за 1 минуту</div>
+                        </div>
+                        <div class="catalog-advantages__item">
+                            <div class="catalog-advantages__item-icon">
+                                <img src="img/advantages-icon3.svg" alt="">
+                            </div>
+                            <div class="catalog-advantages__item-title">Без расходных материалов</div>
+                        </div>
+                        <div class="catalog-advantages__item">
+                            <div class="catalog-advantages__item-icon">
+                                <img src="img/advantages-icon2.svg" alt="">
+                            </div>
+                            <div class="catalog-advantages__item-title">Подлинный результат (без преувеличений)</div>
+                        </div>
+                        <div class="catalog-advantages__item">
+                            <div class="catalog-advantages__item-icon">
+                                <img src="img/advantages-icon4.svg" alt="">
+                            </div>
+                            <div class="catalog-advantages__item-title">Одобрено Росздравнадзором</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class='catalog-item'>
+                <div class='container'>
+                    <div class='catalog-item__inner'>
+                        <div class="catalog-item__left">
+                            @@include('components/catalog-item/_catalog-gallery.html')
+                        </div>
+
+                        <div class="catalog-item__right">
+                            @@include('components/catalog-item/_props.html')
+                            <div class="catalog-item__equips">
+                                <div class="catalog-item__subtitle lighthaus">Выберите доп. оборудование для ACCUNIQ BC720:</div>
+                                <div class="catalog-item__equips-wrap">
+                                    <div class="catalog-item__equip">
+                                        <input type='checkbox' />
+                                        <label></label>
+                                        <div class="catalog-item__equip-img">
+                                            <img src="img/equip6.webp" alt="">
+                                        </div>
+                                        <div class="catalog-item__equip-title">Ультразвуковой антропометр</div>
+                                    </div>
+                                    <div class="catalog-item__equip">
+                                        <input checked type='checkbox' />
+                                        <label></label>
+                                        <div class="catalog-item__equip-img">
+                                            <img src="img/equip6.webp" alt="">
+                                        </div>
+                                        <div class="catalog-item__equip-title">Термопринтер</div>
+                                    </div>
+                                    <div class="catalog-item__equip">
+                                        <input type='checkbox' />
+                                        <label></label>
+                                        <div class="catalog-item__equip-img">
+                                            <img src="img/equip6.webp" alt="">
+                                        </div>
+                                        <div class="catalog-item__equip-title">Ультразвуковой ростомер</div>
+                                    </div>
+                                    <div class="catalog-item__equip">
+                                        <input type='checkbox' />
+                                        <label></label>
+                                        <div class="catalog-item__equip-img">
+                                            <img src="img/equip6.webp" alt="">
+                                        </div>
+                                        <div class="catalog-item__equip-title">Электроды для голеностопных суставов</div>
+                                    </div>
+                                    <div class="catalog-item__equip">
+                                        <input type='checkbox' />
+                                        <label></label>
+                                        <div class="catalog-item__equip-img">
+                                            <img src="img/equip6.webp" alt="">
+                                        </div>
+                                        <div class="catalog-item__equip-title">Тележка для сфигмоманометра</div>
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('components/catalog-item/_nav.html')
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class='seo'>
+                @@include('components/page-blocks/_seo.html',{"title":"Описание ACCUNIQ BC380"})
+            </section>
+
+            <section class='props'>
+                @@include('components/page-blocks/_props.html')
+            </section>
+
+            <section class='results'>
+                @@include('components/page-blocks/_results.html')
+            </section>
+
+            <section class='effectivity effectivity--reverse'>
+                @@include('components/page-blocks/_effectivity.html')
+            </section>
+
+            <section class='tech'>
+                @@include('components/page-blocks/_tech.html')
+            </section>
+
+            <section class='trust'>
+                @@include('components/page-blocks/_trust.html')
+            </section>
+
+            <section class='consult'>
+                @@include('components/page-blocks/_consult.html',{"type":"2"})
+            </section>
+
+            <section class='decision-collection'>
+                @@include('components/page-blocks/_decision.html')
+            </section>
+
+            <section class='contacts'>
+                @@include('components/page-blocks/_contacts.html')
+            </section>
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+    @@include('components/page-blocks/_video-modal.html')
+    <!--  -->
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

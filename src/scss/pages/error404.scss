@@ -1,0 +1,114 @@
+@import "../vars.scss";
+.error404 {
+    padding: 120px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 40px;
+    }
+    &__left {
+        width: 428px;
+        max-width: 100%;
+        padding-top: 45px;
+    }
+    &__desc {
+        font-size: 24px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        margin-top: 19px;
+    }
+    &__desc2 {
+        font-size: 16px;
+        line-height: 169%;
+        letter-spacing: 0.02em;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        margin-top: 43px;
+        max-width: 360px;
+    }
+    &__buttons {
+        margin-top: 55px;
+        display: flex;
+        align-items: center;
+    }
+    &__btn {
+        width: 206px;
+        height: 70px;
+        border-radius: 50px;
+        margin: 0 20px 0 0;
+        font-size: 15px;
+        letter-spacing: 0.02em;
+        svg {
+            margin-left: 15px;
+        }
+    }
+    &__img {
+        width: 705px;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .error404 {
+        padding: 75px 0;
+        &__left {
+            padding: 0;
+        }
+        &__img {
+            width: 500px;
+        }
+        &__desc {
+            margin-top: 10px;
+        }
+        &__desc2 {
+            margin-top: 20px;
+        }
+        &__buttons {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .error404 {
+        padding: 45px 0;
+        &__inner {
+            flex-direction: column;
+            padding: 0;
+        }
+        &__img {
+            order: -1;
+            width: 300px;
+            max-width: 100%;
+        }
+        &__left {
+            margin-top: 30px;
+        }
+        &__desc {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+        &__desc2 {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        &__buttons {
+            margin-top: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .error404 {
+        padding: 30px 0;
+        &__buttons {
+            display: block;
+        }
+        &__btn {
+            width: 100%;
+            margin: 10px 0 0;
+        }
+    }
+}

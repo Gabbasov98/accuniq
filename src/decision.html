@@ -1,0 +1,57 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"О компании", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html',{"subHeader":"","p0":"","between":""})
+        <!-- @@include('components/page-blocks/_header.html',{"subHeader":"type3","p0":"","between":""}) -->
+        <main class="content">
+            @@include('components/page-blocks/_breadcrumbs.html',{"second":"О компании","third":"","fourth":""})
+
+            <section class='decision'>
+                <div class='container'>
+                    <div class="decision__title display1 lighthaus">ГОтовые решения для вашего бизнеса</div>
+                    <div class="decision__desc lighthaus">Выберите отраслевое решение для вашего бизнеса</div>
+                    <div class='decision__items'>
+                        <div class="decision-card">
+                            @@include('components/cards/_decision-card.html',{"img":"decision","title":"Частная медицина"})
+                        </div>
+                        <div class="decision-card">
+                            @@include('components/cards/_decision-card.html',{"img":"decision2","title":"Фитнес"})
+                        </div>
+                        <div class="decision-card">
+                            @@include('components/cards/_decision-card.html',{"img":"decision3","title":"Wellness & Beauty"})
+                        </div>
+                        <div class="decision-card">
+                            @@include('components/cards/_decision-card.html',{"img":"decision4","title":"Государственная медицина"})
+                        </div>
+                        <div class="decision-card">
+                            @@include('components/cards/_decision-card.html',{"img":"decision5","title":"Спорт"})
+                        </div>
+                        <div class="decision-card">
+                            @@include('components/cards/_decision-card.html',{"img":"decision6","title":"Корпоративные решения"})
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class='consult'>
+                @@include('components/page-blocks/_consult.html',{"type":"2"})
+            </section>
+
+            <section class='seo'>
+                @@include('components/page-blocks/_seo.html',{"title":"SEo текст"})
+            </section>
+
+            <section class='contacts'>
+                @@include('components/page-blocks/_contacts.html')
+            </section>
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
