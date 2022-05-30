@@ -131,6 +131,7 @@
         display: flex;
         align-items: center;
         color: #FFFFFF;
+        font-family: $font3;
         label {
             &::before {
                 border-color: #fff;
@@ -597,6 +598,7 @@
         grid-template-columns: 1fr 1fr;
         gap: 80px;
         p {
+            font-family: $font3;
             font-size: 15px;
             line-height: 180%;
             letter-spacing: 0.02em;

@@ -1,4 +1,4 @@
-<header class='header @@if(subHeader !== ""){header--with-subheader}'>
+<header class='header'>
     <div class='container'>
         <div class='header__inner'>
             <a href="index.html" class="header__logo">
@@ -31,50 +31,7 @@
                         <a href="" class="nav__item">О компании</a>
                         <a href="" class="nav__item">Контакты</a>
                     </nav>
-                    @@if(subHeader !== ""){
-                    <div class="subheader">
-                        <div class="container">
-                            <div class="subheader__links  @@if(between ==='true'){subheader__links--between} @@if(p0 ==='true'){subheader__links--p0}">
-                                @@if(subHeader === "type1"){
-                                <a href="" class="subheader__link">NATIONAL ELECTRIC</a>
-                                <a href="" class="subheader__link">Карта продаж</a>
-                                <a href="" class="subheader__link">Продукты</a>}
-                                <!--  -->
-                                @@if(subHeader === "type2"){
-                                <a href="" class="subheader__link">ACCUNIQ BC720</a>
-                                <a href="" class="subheader__link">ACCUNIQ BC380</a>
-                                <a href="" class="subheader__link">ACCUNIQ BC310</a>
-                                <a href="" class="subheader__link">ACCUNIQ BC300</a>
-                                <a href="" class="subheader__link">Дополнительное оборудование</a>}
-                                <!--  -->
-                                @@if(subHeader === "type3"){
-                                <a href="" class="subheader__link">ACCUNIQ BC380</a>
-                                <a href="" class="subheader__link">Технические характеристики</a>
-                                <a href="" class="subheader__link">Результаты анализа </a>
-                                <a href="" class="subheader__link">Доказанная эффективность</a>
-                                <a href="" class="subheader__link"> Совместимость </a>
-                                <a href="" class="subheader__link">Сферы применения </a>}
-                                <!--  -->
-                                @@if(subHeader === "type4"){
-                                <a href="" class="subheader__link">В начало</a>
-                                <a href="" class="subheader__link">Преимущества </a>
-                                <a href="" class="subheader__link">Результаты анализа</a>
-                                <a href="" class="subheader__link"> Доказанная эффективность</a>
-                                <a href="" class="subheader__link">Продукты</a>
-                                <a href="" class="subheader__link">Технологии </a>
-                                <a href="" class="subheader__link">Нам доверяют </a>}
-                                <!--  -->
-                                @@if(subHeader === "type5"){
-                                <a href="" class="subheader__link"> ACCUNIQ HEALTH PROJECT</a>
-                                <a href="" class="subheader__link">Описание курса</a>
-                                <a href="" class="subheader__link">Кому подойдет этот курс?</a>
-                                <a href="" class="subheader__link"> Чему вы научитесь?</a>
-                                <a href="" class="subheader__link"> Преподаватели</a>
-                                <a href="" class="subheader__link">Программа курса</a>
-                                <a href="" class="subheader__link">Сертификат</a>}
-                            </div>
-                        </div>
-                    </div>}
+
                     <div class="header__socials">
                         <a href="" class="header__socials-item">
                             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,3 +59,47 @@
         </div>
     </div>
 </header>
+@@if(subHeader !== ""){
+<div class="subheader">
+    <div class="container">
+        <div class="subheader__links  @@if(between ==='true'){subheader__links--between} @@if(p0 ==='true'){subheader__links--p0}">
+            @@if(subHeader === "type1"){
+            <a href="" class="subheader__link">NATIONAL ELECTRIC</a>
+            <a href="" class="subheader__link">Карта продаж</a>
+            <a href="" class="subheader__link">Продукты</a>}
+            <!--  -->
+            @@if(subHeader === "type2"){
+            <a href="" class="subheader__link">ACCUNIQ BC720</a>
+            <a href="" class="subheader__link">ACCUNIQ BC380</a>
+            <a href="" class="subheader__link">ACCUNIQ BC310</a>
+            <a href="" class="subheader__link">ACCUNIQ BC300</a>
+            <a href="" class="subheader__link">Дополнительное оборудование</a>}
+            <!--  -->
+            @@if(subHeader === "type3"){
+            <a href="" class="subheader__link">ACCUNIQ BC380</a>
+            <a href="" class="subheader__link">Технические характеристики</a>
+            <a href="" class="subheader__link">Результаты анализа </a>
+            <a href="" class="subheader__link">Доказанная эффективность</a>
+            <a href="" class="subheader__link"> Совместимость </a>
+            <a href="" class="subheader__link">Сферы применения </a>}
+            <!--  -->
+            @@if(subHeader === "type4"){
+            <a href="" class="subheader__link">В начало</a>
+            <a href="" class="subheader__link">Преимущества </a>
+            <a href="" class="subheader__link">Результаты анализа</a>
+            <a href="" class="subheader__link"> Доказанная эффективность</a>
+            <a href="" class="subheader__link">Продукты</a>
+            <a href="" class="subheader__link">Технологии </a>
+            <a href="" class="subheader__link">Нам доверяют </a>}
+            <!--  -->
+            @@if(subHeader === "type5"){
+            <a href="" class="subheader__link"> ACCUNIQ HEALTH PROJECT</a>
+            <a href="" class="subheader__link">Описание курса</a>
+            <a href="" class="subheader__link">Кому подойдет этот курс?</a>
+            <a href="" class="subheader__link"> Чему вы научитесь?</a>
+            <a href="" class="subheader__link"> Преподаватели</a>
+            <a href="" class="subheader__link">Программа курса</a>
+            <a href="" class="subheader__link">Сертификат</a>}
+        </div>
+    </div>
+</div>}
