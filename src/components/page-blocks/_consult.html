@@ -2,11 +2,11 @@
     <div class='consult__inner'>
         <div class="consult__info">
             @@if(type === "1"){
-            <div class="consult__title lighthaus">Бесплатная демонстрация оборудования и тестирование позволит вам принять решение!</div>
+            <div class="consult__title display3 lighthaus">Бесплатная демонстрация оборудования и тестирование позволит вам принять решение!</div>
             <div class="consult__desc lighthaus">Отправьте ваше имя и телефон, наш консультант свяжется с вами, чтобы договорится о дате установки оборудования на бесплатный пробный период</div>} @@if(type === "2"){
-            <div class="consult__title lighthaus">все Еще в поисках подходящего решения?</div>
+            <div class="consult__title consult__title--big lighthaus">все Еще в поисках подходящего решения?</div>
             <div class="consult__desc lighthaus">Получите бесплатную консультацию и индивидуальное решение с настройкой оборудования от наших специалистов! Отправьте нам ваше имя и телефон, и мы свяжемся с вами</div>} @@if(type === "3"){
-            <div class="consult__title lighthaus">все еще Остались вопросы по курсу?</div>
+            <div class="consult__title consult__title--big lighthaus">все еще Остались вопросы по курсу?</div>
             <div class="consult__desc lighthaus">Отправьте нам ваше имя и телефон, мы свяжемся с вами и ответим на все интересующие вас вопросы!</div>}
             <form action="" class="consult__form">
                 <fieldset class='form-group'>
@@ -15,7 +15,7 @@
                 </fieldset>
                 <fieldset class='form-group'>
                     <img src="img/phone.svg" alt="">
-                    <input type='text' placeholder="Имя" />
+                    <input type='tel' placeholder="Номер телефона" />
                 </fieldset>
                 <button class="consult__btn btn btn-brown lighthaus">
                     <span>Отправить</span>

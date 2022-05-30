@@ -14,7 +14,7 @@
                             <div class="main__desc lighthaus">Три главные ценности, на которых строится бизнес: качество, цена и сервис</div>
                         </div>
                         <button class="main__btn btn btn-brown lighthaus">
-                             <span>Оставить заявку</span>
+                             <span>связаться <br> с нами</span>
                              <svg width="101" height="8" viewBox="0 0 101 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M100.354 4.35355C100.549 4.15829 100.549 3.84171 100.354 3.64645L97.1716 0.464466C96.9763 0.269204 96.6597 0.269204 96.4645 0.464466C96.2692 0.659728 96.2692 0.976311 96.4645 1.17157L99.2929 4L96.4645 6.82843C96.2692 7.02369 96.2692 7.34027 96.4645 7.53553C96.6597 7.7308 96.9763 7.7308 97.1716 7.53553L100.354 4.35355ZM0 4.5H100V3.5H0V4.5Z" fill="white"/>
                             </svg>
@@ -110,8 +110,8 @@
                     <div class="sale-geography__title display2 lighthaus">Карта продаж ACCUNIQ в России и СНГ</div>
                     <div class="sale-geography__desc lighthaus">Выберите ваш город</div>
                 </div>
-                <div class="sale-geography__map">
-                    <img src="img/map.webp" alt="">
+                <div class="sale-geography__map" id="map2">
+
                 </div>
             </section>
 
@@ -165,6 +165,47 @@
     </div>
 
     @@include('components/page-blocks/_scripts.html')
+    <script type="text/javascript">
+        // Функция ymaps.ready() будет вызвана, когда
+        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+        ymaps.ready(init);
+
+        function init() {
+            var myMap2 = new ymaps.Map("map2", {
+                center: [55.159902, 71.402554],
+                zoom: 4
+            });
+
+            const addMark = (x, y) => {
+                var myPlacemark = new ymaps.Placemark([x, y], null, {
+                    iconLayout: 'default#image',
+                    iconImageHref: "img/mark.svg",
+                    iconImageSize: [17, 17],
+                    iconImageOffset: [-15, -44]
+                });
+
+                myMap2.geoObjects.add(myPlacemark);
+            }
+
+            addMark(55.766131, 37.531954)
+            addMark(53.902284, 27.561831)
+            addMark(51.660781, 39.200296)
+            addMark(47.222078, 39.720358)
+            addMark(48.707067, 44.516975)
+            addMark(55.796127, 49.106414)
+            addMark(53.195878, 50.100202)
+            addMark(54.735152, 55.958736)
+            addMark(55.159902, 61.402554)
+            addMark(54.989347, 73.368221)
+            addMark(55.030204, 82.920430)
+            addMark(56.010569, 92.852572)
+            addMark(52.033635, 113.501049)
+            addMark(62.027221, 129.732178)
+            addMark(59.565155, 150.808586)
+
+
+        }
+    </script>
 </body>
 
 </html>

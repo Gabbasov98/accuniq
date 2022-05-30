@@ -7,6 +7,7 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036" type="text/javascript"></script>
     <title>Обучение</title>
 </head>
 
@@ -163,7 +164,7 @@
                     <div class="edu-desc">
                         <div class="edu-desc__left">
                             <div class="edu-desc__video-wrap">
-                                <a href="" class="edu-desc__video">
+                                <a class="edu-desc__video" href="#myVideo" data-video-src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.mp4" data-fancybox>
                                     <div class="edu-desc__video-btn btn lighthaus" btn-text="смотреть видео о курсе">
                                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M18.3578 11.6133L7.74767 4.9828C7.58947 4.88395 7.40771 4.82924 7.22124 4.82434C7.03477 4.81943 6.85038 4.86452 6.68721 4.95491C6.52404 5.0453 6.38803 5.17771 6.29329 5.3384C6.19856 5.49909 6.14855 5.6822 6.14845 5.86873V19.1305C6.14765 19.3174 6.19708 19.501 6.29159 19.6623C6.38609 19.8235 6.52219 19.9564 6.68565 20.0471C6.84911 20.1377 7.03392 20.1827 7.22075 20.1775C7.40758 20.1722 7.58956 20.1169 7.74767 20.0172L18.3578 13.3867C18.5081 13.2926 18.632 13.1619 18.7179 13.0068C18.8038 12.8517 18.8489 12.6773 18.8489 12.5C18.8489 12.3227 18.8038 12.1483 18.7179 11.9932C18.632 11.8381 18.5081 11.7073 18.3578 11.6133Z" fill="white"/>
@@ -637,7 +638,7 @@
     <div class='consult__inner'>
         <div class="consult__info">
               
-            <div class="consult__title lighthaus">все еще Остались вопросы по курсу?</div>
+            <div class="consult__title consult__title--big lighthaus">все еще Остались вопросы по курсу?</div>
             <div class="consult__desc lighthaus">Отправьте нам ваше имя и телефон, мы свяжемся с вами и ответим на все интересующие вас вопросы!</div>
             <form action="" class="consult__form">
                 <fieldset class='form-group'>
@@ -646,7 +647,7 @@
                 </fieldset>
                 <fieldset class='form-group'>
                     <img src="img/phone.svg" alt="">
-                    <input type='text' placeholder="Имя" />
+                    <input type='tel' placeholder="Номер телефона" />
                 </fieldset>
                 <button class="consult__btn btn btn-brown lighthaus">
                     <span>Отправить</span>
@@ -696,8 +697,11 @@
         </div>
     </div>
 </div>
-<div class="map">
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae489661fd65b4ea67ac8a05f117a2a4b954ce5b05ec1130259fe86aace374855&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+
+
+
+<div class="map" id="map">
+    <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae489661fd65b4ea67ac8a05f117a2a4b954ce5b05ec1130259fe86aace374855&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script> -->
 </div>
             </section>
         </main>
@@ -859,10 +863,35 @@
 </footer>
         </footer>
     </div>
+    <video controls id="myVideo" style="display:none;">
+    <source type="video/mp4" loading="lazy">
+    Your browser doesn't support HTML5 video tag.
+</video>
+    <!--  -->
 
     <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
+<script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
 
+    function init() {
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            center: [55.766131, 37.531954],
+            zoom: 15
+        });
+
+        var myPlacemark = new ymaps.Placemark([55.766131, 37.531954], null, {
+            iconLayout: 'default#image',
+            iconImageHref: "img/mark.svg",
+            iconImageSize: [42, 42],
+            iconImageOffset: [-15, -44]
+        });
+        myMap.geoObjects.add(myPlacemark);
+    }
+</script>
 </body>
 
 </html>

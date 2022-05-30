@@ -7,6 +7,7 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036" type="text/javascript"></script>
     <title>О компании</title>
 </head>
 
@@ -387,7 +388,27 @@
 
     <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
+<script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
 
+    function init() {
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            center: [55.766131, 37.531954],
+            zoom: 15
+        });
+
+        var myPlacemark = new ymaps.Placemark([55.766131, 37.531954], null, {
+            iconLayout: 'default#image',
+            iconImageHref: "img/mark.svg",
+            iconImageSize: [42, 42],
+            iconImageOffset: [-15, -44]
+        });
+        myMap.geoObjects.add(myPlacemark);
+    }
+</script>
 </body>
 
 </html>

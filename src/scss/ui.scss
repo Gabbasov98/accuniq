@@ -58,6 +58,7 @@
         }
     }
     label {
+        font-weight: 400;
         padding-left: 37px;
         position: relative;
         min-height: 20px;
@@ -125,9 +126,10 @@
         font-size: 16px;
         letter-spacing: 0.02em;
         color: #616161;
+        padding-bottom: 3px;
+        border-bottom: 1px solid transparent;
         &--active {
-            text-decoration-line: underline;
-            color: $black;
+            border-color: $black;
             pointer-events: none;
         }
     }

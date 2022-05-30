@@ -7,6 +7,7 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036" type="text/javascript"></script>
     <title>Блог</title>
 </head>
 
@@ -338,7 +339,7 @@
     <div class='consult__inner'>
         <div class="consult__info">
              
-            <div class="consult__title lighthaus">все Еще в поисках подходящего решения?</div>
+            <div class="consult__title consult__title--big lighthaus">все Еще в поисках подходящего решения?</div>
             <div class="consult__desc lighthaus">Получите бесплатную консультацию и индивидуальное решение с настройкой оборудования от наших специалистов! Отправьте нам ваше имя и телефон, и мы свяжемся с вами</div> 
             <form action="" class="consult__form">
                 <fieldset class='form-group'>
@@ -347,7 +348,7 @@
                 </fieldset>
                 <fieldset class='form-group'>
                     <img src="img/phone.svg" alt="">
-                    <input type='text' placeholder="Имя" />
+                    <input type='tel' placeholder="Номер телефона" />
                 </fieldset>
                 <button class="consult__btn btn btn-brown lighthaus">
                     <span>Отправить</span>
@@ -413,8 +414,11 @@
         </div>
     </div>
 </div>
-<div class="map">
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae489661fd65b4ea67ac8a05f117a2a4b954ce5b05ec1130259fe86aace374855&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+
+
+
+<div class="map" id="map">
+    <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae489661fd65b4ea67ac8a05f117a2a4b954ce5b05ec1130259fe86aace374855&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script> -->
 </div>
             </section>
         </main>
@@ -579,7 +583,27 @@
 
     <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
+<script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
 
+    function init() {
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            center: [55.766131, 37.531954],
+            zoom: 15
+        });
+
+        var myPlacemark = new ymaps.Placemark([55.766131, 37.531954], null, {
+            iconLayout: 'default#image',
+            iconImageHref: "img/mark.svg",
+            iconImageSize: [42, 42],
+            iconImageOffset: [-15, -44]
+        });
+        myMap.geoObjects.add(myPlacemark);
+    }
+</script>
 </body>
 
 </html>

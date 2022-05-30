@@ -158,6 +158,10 @@
             line-height: 147%;
             font-feature-settings: 'pnum' on, 'lnum' on;
             margin-top: 21px;
+            display: block;
+            position: relative;
+            z-index: 3;
+            text-decoration: underline;
         }
     }
     &__buttons {
@@ -337,6 +341,9 @@
     padding: 110px 0 100px;
     &--white {
         background: #fff;
+        @media screen and (min-width: 1400px) {
+            padding-bottom: 145px;
+        }
         .props__item {
             background: #F5F5F5;
         }
