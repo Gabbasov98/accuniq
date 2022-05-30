@@ -203,6 +203,14 @@
             addMark(62.027221, 129.732178)
             addMark(59.565155, 150.808586)
 
+            myMap2.controls.remove('geolocationControl');
+            myMap2.controls.remove('searchControl');
+            myMap2.controls.remove('trafficControl');
+            myMap2.controls.remove('typeSelector');
+            myMap2.controls.remove('fullscreenControl');
+            myMap2.controls.remove('rulerControl');
+            myMap2.behaviors.disable(['scrollZoom']);
+            myMap2.controls.remove('zoomControl');
 
         }
     </script>

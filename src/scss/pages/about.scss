@@ -119,6 +119,10 @@
             height: 100% !important;
             width: 100% !important;
         }
+        .ymaps-2-1-79-map-copyrights-promo,
+        .ymaps-2-1-79-copyright__content {
+            display: none;
+        }
     }
 }
 
@@ -175,6 +179,9 @@
     }
     .sale-geography {
         padding: 75px 0;
+        &__map {
+            height: 600px;
+        }
     }
 }
 
@@ -231,6 +238,7 @@
         padding: 45px 0;
         &__map {
             margin-top: 45px;
+            height: 450px;
         }
     }
 }
@@ -281,6 +289,7 @@
         }
         &__map {
             margin-top: 30px;
+            height: 300px;
         }
     }
 }
