@@ -8,14 +8,23 @@
     &:focus {
         box-shadow: none;
     }
+    &:hover {
+        span+svg {
+            transform: translateX(5px);
+        }
+    }
 }
 
 .btn-black {
     background-color: #000;
     color: #fff;
     &:hover {
-        background-color: rgba(#000, .8);
-        color: #fff;
+        background-color: transparent;
+        border: 1px solid $black;
+        color: $black;
+        path {
+            fill: $black;
+        }
     }
 }
 

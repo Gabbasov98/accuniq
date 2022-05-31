@@ -71,8 +71,16 @@
         border-radius: 50px;
         font-size: 15px;
         letter-spacing: 0.02em;
+        border: 1px solid $primary;
         svg {
             margin-left: 15px;
+        }
+        &:hover {
+            background-color: #fff;
+            color: $primary;
+            path {
+                fill: $primary;
+            }
         }
     }
 }
@@ -280,6 +288,11 @@
         letter-spacing: 0.02em;
         text-transform: lowercase;
         font-feature-settings: 'pnum' on, 'lnum' on;
+        transform: translateY(70px);
+        transition: all 1.725s;
+        &--active {
+            transform: translateY(0);
+        }
         &:not(:last-child) {
             margin-bottom: 60px;
         }
@@ -424,6 +437,11 @@
         padding: 35px 20px 43px;
         text-align: center;
         position: relative;
+        transform: translateY(120px);
+        transition: all 1.725s;
+        &--active {
+            transform: translateY(0);
+        }
         &:first-child {
             &::after {
                 display: none;

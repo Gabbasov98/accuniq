@@ -2,6 +2,9 @@ function blogSlider() {
     var swiper = new Swiper('.blog-collection .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 10,
+        autoplay: true,
+        speed: 2000,
+        loop: true,
         navigation: {
             nextEl: '.blog-collection .swiper-button-next',
             prevEl: '.blog-collection .swiper-button-prev',

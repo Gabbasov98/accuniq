@@ -9,6 +9,9 @@ function decisionSlider() {
     var swiper = new Swiper('.decision-collection .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 30,
+        autoplay: true,
+        speed: 2000,
+        loop: true,
         navigation: {
             nextEl: '.decision-collection .swiper-button-next',
             prevEl: '.decision-collection .swiper-button-prev',
@@ -79,3 +82,56 @@ $(document).ready(function() {
     })
 
 })
+
+
+$(window).scroll(function() {
+    changeAdvantageColor()
+    changeLearnColor()
+    changeProgrammColor()
+});
+
+
+function changeAdvantageColor() {
+    $(".advantages__item-icon").each(function(index, el) {
+
+        var wt = $(window).scrollTop();
+        var wh = $(window).height();
+        var et = $(el).offset().top;
+        var eh = $(el).outerHeight();
+        var dh = $(document).height();
+        if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+            $(el).addClass("advantages__item-icon--active")
+        }
+
+    });
+}
+
+function changeLearnColor() {
+    $(".what-learn__item").each(function(index, el) {
+
+        var wt = $(window).scrollTop();
+        var wh = $(window).height();
+        var et = $(el).offset().top;
+        var eh = $(el).outerHeight();
+        var dh = $(document).height();
+        if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+            $(el).addClass("what-learn__item--active")
+        }
+
+    });
+}
+
+function changeProgrammColor() {
+    $(".programm__item").each(function(index, el) {
+
+        var wt = $(window).scrollTop();
+        var wh = $(window).height();
+        var et = $(el).offset().top;
+        var eh = $(el).outerHeight();
+        var dh = $(document).height();
+        if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+            $(el).addClass("programm__item--active")
+        }
+
+    });
+}

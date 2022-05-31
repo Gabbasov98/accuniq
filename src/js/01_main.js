@@ -72,10 +72,56 @@ $(document).ready(function() {
     $('.video').parent().click(function() {
         if ($(this).children(".video").get(0).paused) {
             $(this).children(".video").get(0).play();
-            $(this).children(".playpause").fadeOut();
+            $(this).children(".playpause").removeClass("video__btn--pause")
         } else {
             $(this).children(".video").get(0).pause();
-            $(this).children(".playpause").fadeIn();
+            $(this).children(".playpause").addClass("video__btn--pause")
         }
     });
+
+
+
+    // $(".video").get(0).play();
+    if (document.querySelector('#indexVideo')) {
+        var video = document.querySelector('#indexVideo');
+        var promise = video.play();
+
+        if (promise !== undefined) {
+            promise.then(_ => {
+                // Autoplay started!
+            }).catch(error => {
+                // Autoplay not allowed!
+                // Mute video and try to play again
+                video.muted = true;
+                video.play();
+
+                // Show something in the UI that the video is muted
+            });
+        }
+    }
+
+
+    $(".subheader__link").click(function(event) {
+        event.preventDefault();
+        var idc = $(this).attr('href'),
+            top = $(idc).offset().top;
+        $('body,html').animate({ scrollTop: top - 155 }, 0);
+    });
+
+
+    $(window).scroll(function() {
+        var $sections = $('.anchor');
+        $sections.each(function(i, el) {
+            var top = $(el).offset().top - 175;
+
+            var bottom = top + $(el).height();
+            var scroll = $(window).scrollTop();
+            var idn = $(el).attr('id');
+            if (scroll > top && scroll < bottom) {
+                $('.subheader__link').removeClass('subheader__link--active');
+                $('.subheader__link[href="#' + idn + '"]').addClass('subheader__link--active');
+            }
+        });
+    });
+
 });

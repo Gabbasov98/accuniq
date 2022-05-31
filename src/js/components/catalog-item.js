@@ -56,6 +56,8 @@ function resultsSlider() {
     var swiper = new Swiper('.results .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 10,
+        speed: 2000,
+        // autoplay: true,
         navigation: {
             nextEl: '.results .swiper-button-next',
             prevEl: '.results .swiper-button-prev',
@@ -64,8 +66,19 @@ function resultsSlider() {
             el: '.results .swiper-pagination',
             type: 'fraction',
             clickable: true,
+            formatFractionCurrent: addZero,
+            formatFractionTotal: addZero
         },
+
+
     })
+    swiper.on('slideChange', function() {
+        console.log('*** mySwiper.realIndex', swiper.realIndex);
+    });
+
+    function addZero(num) {
+        return (num > 9) ? num : '0' + num;
+    }
 }
 
 $(document).ready(function() {
