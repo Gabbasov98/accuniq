@@ -8,11 +8,22 @@ function catalogSlider() {
             slidesPerView: 1,
             spaceBetween: 0,
             effect: "fade",
+            speed: 2000,
+            autoplay: {
+                delay: 4000,
+            },
+            loop: true,
             navigation: {
                 nextEl: `.catalog-group__slider[data-slider-id="${index}"] .swiper-button-next`,
                 prevEl: `.catalog-group__slider[data-slider-id="${index}"] .swiper-button-prev`,
             },
         })
+        catalogSlidersArray[index].on('slideNextTransitionStart', function() {
+            $(`.catalog-group__slider[data-slider-id="${index}"] .swiper-button-next`).addClass("swiper-button-active")
+            setTimeout(() => {
+                $(`.catalog-group__slider[data-slider-id="${index}"] .swiper-button-next`).removeClass("swiper-button-active")
+            }, 500);
+        });
     })
 }
 
@@ -20,6 +31,11 @@ function equipmentSlider() {
     var swiper = new Swiper('.equipment .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 30,
+        speed: 2000,
+        autoplay: {
+            delay: 4000,
+        },
+        loop: true,
         navigation: {
             nextEl: '.equipment .swiper-button-next',
             prevEl: '.equipment .swiper-button-prev',
@@ -39,6 +55,12 @@ function equipmentSlider() {
             },
         }
     })
+    swiper.on('slideNextTransitionStart', function() {
+        $(".equipment .swiper-button-next").addClass("swiper-button-active")
+        setTimeout(() => {
+            $(".equipment .swiper-button-next").removeClass("swiper-button-active")
+        }, 500);
+    });
 }
 
 

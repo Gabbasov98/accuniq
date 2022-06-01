@@ -80,6 +80,24 @@ $(document).ready(function() {
     });
 
 
+    $(".edu-desc__video-wrap").click(function() {
+
+        $(".edu-desc__video").toggleClass("edu-desc__video--active")
+        if ($(".video2").get(0).paused) {
+            $(".video2").get(0).play();
+            $(".edu-desc__video-btn").hide()
+        } else {
+            $(".video2").get(0).pause();
+            $(".edu-desc__video-btn").show()
+        }
+    })
+
+
+
+
+
+
+
 
     // $(".video").get(0).play();
     if (document.querySelector('#indexVideo')) {

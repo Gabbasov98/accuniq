@@ -5,7 +5,11 @@ function catalogGallery() {
         freeMode: true,
         watchSlidesProgress: true,
         direction: "vertical",
-        // mousewheel: true,
+        speed: 2000,
+        autoplay: {
+            delay: 4000,
+        },
+        loop: true,
         mousewheel: {
             releaseOnEdges: true,
         },
@@ -34,6 +38,11 @@ function catalogGallery() {
     var swiper2 = new Swiper(".catalog-gallery .mySwiper2", {
         spaceBetween: 10,
         direction: "vertical",
+        speed: 1000,
+        autoplay: {
+            delay: 4000,
+        },
+        loop: true,
         navigation: {
             nextEl: " .swiper-button-next",
             prevEl: " .swiper-button-prev",
@@ -57,7 +66,10 @@ function resultsSlider() {
         slidesPerView: 1,
         spaceBetween: 10,
         speed: 2000,
-        // autoplay: true,
+        autoplay: {
+            delay: 4000,
+        },
+        loop: true,
         navigation: {
             nextEl: '.results .swiper-button-next',
             prevEl: '.results .swiper-button-prev',
@@ -72,8 +84,11 @@ function resultsSlider() {
 
 
     })
-    swiper.on('slideChange', function() {
-        console.log('*** mySwiper.realIndex', swiper.realIndex);
+    swiper.on('slideNextTransitionStart', function() {
+        $(".results .swiper-button-next").addClass("swiper-button-active")
+        setTimeout(() => {
+            $(".results .swiper-button-next").removeClass("swiper-button-active")
+        }, 500);
     });
 
     function addZero(num) {

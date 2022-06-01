@@ -79,12 +79,16 @@
         }
         &__info {
             margin-top: 0;
-            align-items: flex-end;
         }
         &__text {
             padding: 0;
             margin-left: 115px;
             width: 733px;
+        }
+        @media screen and (min-width: 1400px) {
+            &__img {
+                padding-top: 120px;
+            }
         }
     }
 }

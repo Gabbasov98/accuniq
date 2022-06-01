@@ -83,4 +83,11 @@
             left: -7px;
         }
     }
+    &-active {
+        background-color: $black;
+        color: #fff;
+        path {
+            fill: #fff;
+        }
+    }
 }

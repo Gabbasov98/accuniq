@@ -136,6 +136,9 @@
         font-size: 25px;
         line-height: 104%;
         letter-spacing: 0.02em;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     &__desc {
         font-size: 15px;
@@ -143,6 +146,10 @@
         letter-spacing: 0.02em;
         font-feature-settings: 'pnum' on, 'lnum' on;
         margin: 28px 0 33px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
     }
     &__link {
         margin-top: auto;
@@ -301,6 +308,9 @@
             color: $black;
             path {
                 fill: $black;
+            }
+            svg {
+                transform: translateX(5px);
             }
         }
     }
