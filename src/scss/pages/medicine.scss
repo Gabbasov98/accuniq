@@ -81,6 +81,7 @@
         }
     }
     &__modal {
+        transition: opacity .425s;
         opacity: 0;
         pointer-events: none;
         position: absolute;

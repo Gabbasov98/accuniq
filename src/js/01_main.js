@@ -80,19 +80,24 @@ $(document).ready(function() {
     });
 
 
-    $(".edu-desc__video-wrap").click(function() {
 
-        $(".edu-desc__video").toggleClass("edu-desc__video--active")
-        if ($(".video2").get(0).paused) {
-            $(".video2").get(0).play();
-            $(".edu-desc__video-btn").hide()
-        } else {
-            $(".video2").get(0).pause();
-            $(".edu-desc__video-btn").show()
+    if (document.querySelector('#indexVideo2')) {
+        var video = document.querySelector('#indexVideo2');
+        var promise = video.play();
+
+        if (promise !== undefined) {
+            promise.then(_ => {
+                // Autoplay started!
+            }).catch(error => {
+                // Autoplay not allowed!
+                // Mute video and try to play again
+                video.muted = true;
+                video.play();
+
+                // Show something in the UI that the video is muted
+            });
         }
-    })
-
-
+    }
 
 
 
