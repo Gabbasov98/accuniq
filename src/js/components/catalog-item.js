@@ -9,7 +9,7 @@ function catalogGallery() {
         autoplay: {
             delay: 4000,
         },
-        loop: true,
+        // loop: true,
         mousewheel: {
             releaseOnEdges: true,
         },

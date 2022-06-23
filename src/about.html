@@ -166,8 +166,6 @@
 
     @@include('components/page-blocks/_scripts.html')
     <script type="text/javascript">
-        // Функция ymaps.ready() будет вызвана, когда
-        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
         ymaps.ready(init);
 
         function init() {
@@ -176,32 +174,36 @@
                 zoom: 4
             });
 
-            const addMark = (x, y) => {
+            const addMark = (x, y, href) => {
                 var myPlacemark = new ymaps.Placemark([x, y], null, {
                     iconLayout: 'default#image',
                     iconImageHref: "img/mark.svg",
                     iconImageSize: [17, 17],
-                    iconImageOffset: [-15, -44]
+                    iconImageOffset: [-15, -44],
+                    href
                 });
 
                 myMap2.geoObjects.add(myPlacemark);
+                myPlacemark.events.add('click', function(e) {
+                    location = e.get('target').options.get('href');
+                });
             }
 
-            addMark(55.766131, 37.531954)
-            addMark(53.902284, 27.561831)
-            addMark(51.660781, 39.200296)
-            addMark(47.222078, 39.720358)
-            addMark(48.707067, 44.516975)
-            addMark(55.796127, 49.106414)
-            addMark(53.195878, 50.100202)
-            addMark(54.735152, 55.958736)
-            addMark(55.159902, 61.402554)
-            addMark(54.989347, 73.368221)
-            addMark(55.030204, 82.920430)
-            addMark(56.010569, 92.852572)
-            addMark(52.033635, 113.501049)
-            addMark(62.027221, 129.732178)
-            addMark(59.565155, 150.808586)
+            addMark(55.766131, 37.531954, 'http://google.ru/')
+            addMark(53.902284, 27.561831, 'http://yandex.ru/')
+            addMark(51.660781, 39.200296, 'http://google.ru/')
+            addMark(47.222078, 39.720358, 'http://google.ru/')
+            addMark(48.707067, 44.516975, 'http://google.ru/')
+            addMark(55.796127, 49.106414, 'http://google.ru/')
+            addMark(53.195878, 50.100202, 'http://google.ru/')
+            addMark(54.735152, 55.958736, 'http://google.ru/')
+            addMark(55.159902, 61.402554, 'http://google.ru/')
+            addMark(54.989347, 73.368221, 'http://google.ru/')
+            addMark(55.030204, 82.920430, 'http://google.ru/')
+            addMark(56.010569, 92.852572, 'http://google.ru/')
+            addMark(52.033635, 113.501049, 'http://google.ru/')
+            addMark(62.027221, 129.732178, 'http://google.ru/')
+            addMark(59.565155, 150.808586, 'http://google.ru/')
 
             myMap2.controls.remove('geolocationControl');
             myMap2.controls.remove('searchControl');

@@ -14,9 +14,7 @@ module.exports = function style() {
     return src('src/scss/style.scss')
         .pipe(map.init())
         .pipe(bulk())
-        .pipe(sass({
-            outputStyle: 'compressed'
-        }).on('error', sass.logError))
+        .pipe(sass().on('error', sass.logError))
         .pipe(prefixer({
             overrideBrowserslist: ['last 8 versions'],
             browsers: [
@@ -32,7 +30,7 @@ module.exports = function style() {
         .pipe(clean({
             level: 2
         }))
-        .pipe(concat('style.min.css'))
+        .pipe(concat('style.css'))
         .pipe(map.write('../sourcemaps/'))
         .pipe(dest('build/css/'))
         .pipe(bs.stream())
